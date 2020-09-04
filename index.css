@@ -1,0 +1,132 @@
+:root {
+  --snake-color: #48cae4;
+  --board-color: #02c39a;
+  --food-color: #ffc43d;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #f0e2db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .game-view {
+  position: absolute;
+  height: 90vh;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .game-view .gameMessage {
+  font-size: 3rem;
+}
+
+#board {
+  height: 27em;
+  width: 27em;
+  border: 8px solid gray;
+  border-radius: 0.5em;
+  background-color: var(--board-color);
+  background-position: 0 0, 15px 15px;
+  background-size: 30px 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[21];
+      grid-template-rows: repeat(21, 1fr);
+  -ms-grid-columns: (1fr)[21];
+      grid-template-columns: repeat(21, 1fr);
+}
+
+.snake {
+  height: calc(30 / 21) em;
+  width: calc(30 / 21) em;
+  border: 2px solid blue;
+  background-color: var(--snake-color);
+}
+
+.food {
+  height: calc(30 / 21) em;
+  width: calc(30 / 21) em;
+  border: 2px solid #e12c2c;
+  background-color: var(--food-color);
+}
+
+.popUp-message {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: None;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 6rem;
+}
+
+.popUp-message input {
+  font-size: 3rem;
+}
+
+.popUp-message .btn {
+  background-color: #fff;
+  color: red;
+}
+
+small {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: red;
+  font-size: 2rem;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=index.css.map */
